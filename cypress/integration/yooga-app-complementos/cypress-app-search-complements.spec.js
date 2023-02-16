@@ -1,7 +1,7 @@
 describe("Teste de Complementos", () => {
 
   beforeEach(() => {
-    cy.loginYooga("14625673712", "humm3r28@*");
+    cy.loginYooga("", "");
   });
 
   it("Acesso a Ajustes> Produtos> Complementos", () => {
