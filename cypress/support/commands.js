@@ -27,12 +27,11 @@ Cypress.Commands.add("homePage", () => {
   cy.visit("https://app.yooga.com.br");
 });
 
-Cypress.Commands.add("loginYooga", ( user, pass) => {
-  // cy.session([user, pass], () => {
-    cy.homePage();
-    cy.wait(1000).get('[name="ion-input-0"]').type(user);
-    cy.wait(1000).get('[name="ion-input-1"]').type(pass);
-    cy.get("button#login-btn").click();
-  });
-// });
+Cypress.Commands.add("loginYooga", (user, pass) => {
+  cy.homePage();
+  cy.wait(1200).get('[name="ion-input-0"]').type(user);
+  cy.wait(1200).get('[name="ion-input-1"]').type(pass);
+  cy.get("button#login-btn").click();
+});
+
 export {};
